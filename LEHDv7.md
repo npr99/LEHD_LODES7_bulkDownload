@@ -81,6 +81,7 @@ for (i in 1:length(filelist)){
 unziplist[1]<-"quietly{"
 fobs<-(length(unziplist))+1
 unziplist[fobs]<-"}"
+unziplist[fobs+1]<-"exit"
 ```
 
 ```

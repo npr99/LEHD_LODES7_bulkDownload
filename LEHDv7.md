@@ -67,7 +67,7 @@ for (i in 1:nstates) {
 ```
 
 
-This is optional for making a list of files to unzip but I have a routine of data processing in Stata:
+This is optional for making a list of files to unzip but this routine will be taken place in Stata, rather than in R (due to memory issue).:
 
 
 ```r

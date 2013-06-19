@@ -71,11 +71,16 @@ This is optional for making a list of files to unzip but I have a routine of dat
 
 
 ```r
-setwd(cpath)
-filelist <- list.files(pattern = ".gz$", recursive = T, include.dirs = T)
-for (i in 1:length(filelist)) {
-    unziplist[i] <- paste("shell gzip -d", filelist[i])
+fpath="E:/Census/LED_OTM/Version7"
+setwd(fpath)
+unziplist<-vector()
+filelist<-list.files(pattern=".gz$", recursive=T, include.dirs=T)
+for (i in 1:length(filelist)){
+  unziplist[i+1]<-paste("shell gzip -d",filelist[i])
 }
+unziplist[1]<-"quietly{"
+fobs<-(length(unziplist))+1
+unziplist[fobs]<-"}"
 ```
 
 ```
@@ -83,7 +88,7 @@ for (i in 1:length(filelist)) {
 ```
 
 ```r
-write.table(unziplist, file = "unzipfilelist.txt", quote = F, row.names = F)
+write.table(unziplist, file="unzip_all.do", quote=F, row.names=F, col.names=F)
 ```
 
 ```

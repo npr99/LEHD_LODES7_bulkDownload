@@ -28,7 +28,7 @@ for (i in 1:nstates) {
     dir.create(opath)
     dir.create(rpath)
     dir.create(wpath)
-    url <- paste0("http://lehd.ces.census.gov/onthemap/LODES7/", stusab)
+    url <- paste0("http://lehd.ces.census.gov/data/lodes/LODES7/", stusab)
     url <- paste0(url, "/")
     ourl <- paste0(url, "od/")
     rurl <- paste0(url, "rac/")

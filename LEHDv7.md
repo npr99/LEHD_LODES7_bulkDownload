@@ -11,7 +11,7 @@ cpath<-'/mnt/ide0/home/cmaene/data/LED_OTM/version7/'
 setwd(cpath)
 # need a list of states with abbreviated state names (US postal abbrev.
 # state name = STUSAB)
-download.file("http://www.census.gov/geo/reference/docs/state.txt", destfile = "state.txt")
+download.file("http://web.archive.org/web/20141125122851/http://www.census.gov/geo/reference/docs/state.txt", destfile = "state.txt")
 states <- read.table("state.txt", sep = "|", header = T, colClasses = "character")
 states <- states[order(as.numeric(states$STATE)), ]
 states.keep <- states[-c(52:57),]

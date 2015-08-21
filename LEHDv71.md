@@ -3,7 +3,7 @@ LEHD OnTheMap LODES Data Downloading One Year
 
 Since wget doesn't work with the new URLs for bulk downloads, I had to write this script. Thank goodness, at least they supllied a list of files (.md5sum).
 
-LODESv7.1 adds 2012 to data set. This program will download 2012.
+LODESv7.1 adds 2012 to data set. This program will download 2012 and 2013.
 
 Total size for all states: 53.2GB - change the code to select the files you need.
 
